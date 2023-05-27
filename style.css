@@ -17,7 +17,7 @@ header{
 @media screen and(min-width:416px){
   .icon{
      width: 50px;
-    height: 50px;
+     height: 50px;
   }
   }
 
@@ -29,6 +29,8 @@ header{
   left: 6%;
   display: inline-flex;
   padding: 14px 30px !important;
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 
@@ -136,7 +138,7 @@ position: absolute;
 right: 140px;
 top: 10px;
 color: #E6E2C3;
-font-family: 'Noto Sans';
+font-family: Arial, sans-serif;
 background-color: #EA5455;
 border-radius: 70px;
 padding: 7px 20px !important;
@@ -151,7 +153,7 @@ position: absolute;
 right: 140px;
 top: 60px;
 color: #E6E2C3;
-font-family: 'Noto Sans';
+font-family: Arial, sans-serif;
 background-color: #EA5455;
 border-radius: 70px;
 padding: 7px 25px !important;
@@ -161,6 +163,34 @@ text-decoration: none;
 #login:hover{
 background-color: #6AA4C8;
 }
+
+
+
+
+
+#menuToggle
+{
+display: block;
+position: relative;
+top: 50px;
+left: 50px;
+
+z-index: 1;
+
+-webkit-user-select: none;
+user-select: none;
+}
+
+#menuToggle a
+{
+text-decoration: none;
+color: #232323;
+
+transition: color 0.3s ease;
+}
+
+
+
 
 :focus {
 border: 0 !important;
@@ -178,6 +208,7 @@ justify-content: center;
 height: 700px;
 max-width: 100% !important;
 padding: 50px 0;
+
 }
 
 .card-box img {
@@ -189,20 +220,20 @@ transition: all 0.75s ease-in-out;
 .card-content h2 {
 font-weight:bolder;
 color: #FFFF00;
-font-family: "Noto Sans";
+font-family: Arial, sans-serif;
 }
 .card-content p {
 padding: 9px 0;
 font-weight: 700;
 color: #ffff ;
-font-family: "Noto Sans";
+font-family: Arial, sans-serif;
 word-spacing: 4px;
 width: 75%;
 height: 50%;
 }
 .card-content .btn {    /*button*/
 padding: 14px 30px !important;
-font-family: 'Noto Sans';
+font-family: Arial, sans-serif;
 border-radius: 200px;
 text-decoration: none;
 color: #fff;
@@ -213,7 +244,6 @@ transition: 0.5s;
 }
 .card-content .btn:hover {
 color: #6AA4C8;
-font-weight: bolder;
 background-color: #000;
 border: 2px solid black;
 
@@ -241,9 +271,9 @@ border-radius: 50%;
 transition: all 0.5s ease-in-out;
 }
 .card-content {
-min-width: 0px;
+
 width: 100%;
-scale: 0;
+scale: 1;
 opacity: 0;
 transition: all 0.1s ease-in-out;
 }
@@ -270,24 +300,28 @@ scale: 1.8;
 
 
 .info-card-box{
-display: flex;
-justify-content: space-around;
+display:flex;
+justify-content: space-evenly;
 align-items: center;            
-flex-wrap: wrap;
+flex-wrap:wrap;
+height: 900px;
+
+
 }
+
 
 .info-card1 {
 width: 400px;
 height: 400px;
-margin: 10px;
 border: 1px solid #ccc;
-border-radius: 30px;
+border-radius: 10px;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 overflow: hidden;
 display: inline-block;
 vertical-align: top;
 position:relative;
-justify-content:space-around;
+
+
 
 }
 
@@ -337,21 +371,20 @@ transform: scale(1.1);
 .info-card2 {
 width: 400px;
 height: 400px;
-margin: 10px;
 border: 1px solid #ccc;
-border-radius: 30px;
+border-radius: 10px;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 overflow: hidden;
 display: inline-block;
 vertical-align: top;
 position:relative;
-justify-content:space-around;
+
 
 }
 
 .info-card2-image {
 height: 200px;
-overflow: hidden;
+overflow:hidden;
 
 }
 
@@ -371,7 +404,7 @@ text-align: center;
 margin-top: 0;
 }
 
-.info-card2content p {
+.info-card2-content p {
 margin-bottom: 20px;
 }
 
@@ -394,21 +427,21 @@ transform: scale(1.1);
 .info-card3 {
 width: 400px;
 height: 400px;
-margin: 10px;
 border: 1px solid #ccc;
-border-radius: 30px;
+border-radius: 10px;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 overflow: hidden;
-display:inline-block;
-vertical-align: bottom;
+display: inline-block;
+vertical-align: top;
 position:relative;
-justify-content:space-around;
+
+
 
 }
 
 .info-card3-image {
 height: 200px;
-overflow: hidden;
+overflow:hidden;
 
 }
 
@@ -428,9 +461,8 @@ text-align: center;
 margin-top: 0;
 }
 
-.info-card3content p {
+.info-card3-content p {
 margin-bottom: 20px;
-top: 20px;
 }
 
 
@@ -440,20 +472,23 @@ transform: scale(1.1);
 }
 
 
-#button1{
-background-color: #0056b3;
+#button1 {
+background-color: none;
+border-color: #0056b3;
 position: relative;
 width: 200px;
 height: 40px;
-left: 27%;
+color: #0056b3;
 text-decoration: none;
 padding: 5px 10px !important;
 border-radius: 20px 20px;
 top: 10px;
-color: #F0E5CF;
+overflow: hidden;
 }
+
 #button1:hover {
-background-color: #6AA4C8; /* Change color as needed */
+background-color:#0056b3; 
+color: #F0E5CF;
 }
 
 #button1:before {
@@ -474,22 +509,42 @@ z-index: -1;
 transform: scale(1) translate(-50%, -50%);
 }
 
-#button2{
-background-color: #0056b3;
-position: relative;
+#button1:after {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 0;
+height: 0;
+background-color: rgba(255, 255, 255, 0.4);
+border-radius: 50%;
+transition: width 0.3s ease-out, height 0.3s ease-out;
+}
+
+#button1:hover:after {
 width: 200px;
-height: 40px;
-left: 24%;
-top: 10px;
-text-decoration: none;
-padding: 5px 10px !important;
-border-radius: 20px 20px;
-color:#F0E5CF;
+height: 200px;
 }
 
 
+#button2 {
+background-color: none;
+border-color: #0056b3;
+position: relative;
+width: 200px;
+height: 40px;
+color: #0056b3;
+text-decoration: none;
+padding: 5px 10px !important;
+border-radius: 20px 20px;
+top: 10px;
+overflow: hidden;
+}
+
 #button2:hover {
-background-color: #6AA4C8; /* Change color as needed */
+background-color:#0056b3; 
+color: #F0E5CF;
 }
 
 #button2:before {
@@ -510,21 +565,42 @@ z-index: -1;
 transform: scale(1) translate(-50%, -50%);
 }
 
-#button3{
-background-color: #0056b3;
+#button2:after {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 0;
+height: 0;
+background-color: rgba(255, 255, 255, 0.4);
+border-radius: 50%;
+transition: width 0.3s ease-out, height 0.3s ease-out;
+}
+
+#button2:hover:after {
+width: 200px;
+height: 200px;
+}
+
+
+#button3 {
+background-color: none;
+border-color: #0056b3;
 position: relative;
 width: 200px;
 height: 40px;
-top: 30px;
-left: 27%;
+color: #0056b3;
 text-decoration: none;
 padding: 5px 10px !important;
 border-radius: 20px 20px;
-color: #F0E5CF;
+top: 10px;
+overflow: hidden;
 }
 
 #button3:hover {
-background-color: #6AA4C8; /* Change color as needed */
+background-color:#0056b3; 
+color: #F0E5CF;
 }
 
 #button3:before {
@@ -545,6 +621,25 @@ z-index: -1;
 transform: scale(1) translate(-50%, -50%);
 }
 
+#button3:after {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 0;
+height: 0;
+background-color: rgba(255, 255, 255, 0.4);
+border-radius: 50%;
+transition: width 0.3s ease-out, height 0.3s ease-out;
+}
+
+#button3:hover:after {
+width: 200px;
+height: 200px;
+}
+
+
 
 
 .container2{
@@ -563,32 +658,41 @@ width: 100%;
 height: 100%;
 overflow: auto;
 background-color: rgba(0,0,0,0.4);
+text-align:initial;
+
 }
 
 .modal-content {
-background-color: white;
-margin: 15% auto;
+background-color:#191c29;
+margin:10% auto;
 padding: 20px;
-width: 85%;
+width: 70%;
 height: auto;
+word-spacing: 3px;
+font-family: Arial, sans-serif;
 }
 .modal h1{
 color: #EA5455;
 }
 .modal li{
 padding-bottom:20px ;
+color: #F0E5CF;
+font-family: Arial, sans-serif;
 }
 
 
 .modal-child{
-padding-top: 5%;
+padding-top: 0;
 padding-left: auto;
+width: 100%;
+
 }
 
 .modal ul{
 padding-bottom: 20px;
-}
+color: rgb(88 199 250 / 100%);
 
+}
 .close {
 color: #aaaaaa;
 float: right;
@@ -646,7 +750,8 @@ cursor: pointer;
       display: flex;
       width: 25%;
       left: 50px;
-      font-family: 'Noto Sans';
+      font-family: Arial, sans-serif;
+      font-size: medium;
      
   }
   .download-button{
@@ -691,71 +796,66 @@ cursor: pointer;
   .title{
       position: absolute;
       justify-self: center;
-      font-family: 'Noto Sans';
+      font-family: Arial, sans-serif;
       height: auto;
       width: auto;
-      left: 18%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size:large;
   }
   .profile-button{
-    top: 20px;
-    width: 70px;
-    height: 70px;
+      top: 20px;
+      width: 70px;
+      height: 70px;
   }
   .profile-button img{
-    display:block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    left: 20%;
+      display:block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      left: 20%;
   }
   .download-button{
-    top: 200px;
-    right: 1%;
-    left: auto;
-    padding: 5px 10px !important;
-    
+      top: 200px;
+      right: 1%;
+      left: auto;
+      padding: 5px 10px !important;
   }
-  
   .text1{
-      position:relative;
+      position: relative;
       left: 0%;
       width: 100%;
-      font-family: 'Noto Sans';
+      font-family: Arial, sans-serif;
+    
       top: 200px;
       padding: 0px;
-    
   }
   .card-box{
-    padding: 10px 20px;
-    width: 300px;
-    height: 300px;
- 
+      padding: 10px 20px;
+      width: 300px;
+      height: 300px;
   }
   .card-box:hover .card-content {
-    transition: all 0.5s ease-in-out;
-    min-width: 200px;
-    scale: 0.7;
-    font-size: small;
-    
+      transition: all 0.5s ease-in-out;
+      min-width: 200px;
+      scale: 0.7;
+      font-size: small;
   }
- .card-box img{
-    position: relative;
-    width: 250px;
-    height: auto;
+  .card-box img{
+      position: relative;
+      width: 250px;
+      height: auto;
   }
   .info-card-box{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;            
-    flex-wrap: wrap;
-    padding: 50px;
-  }
-  #button1{
-    height: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 50px;
   }
   
-
-
 }
+
+
 
 

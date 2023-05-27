@@ -1,19 +1,3 @@
-// Get elements
-const dropdown = document.querySelector('.profile-dropdown');
-const signinLink = document.querySelector('#signin-link');
-const loginLink = document.querySelector('#login-link');
-
-// Show dropdown content
-dropdown.addEventListener('click', function() {
-  this.classList.toggle('active');
-  const dropdownContent = this.querySelector('.dropdown-content');
-  if (dropdownContent.style.display === "block") {
-    dropdownContent.style.display = "none";
-  } else {
-    dropdownContent.style.display = "block";
-  }
-});
-
 var button1 = document.getElementById('button1');
 var modal1 = document.getElementById("modal1");
 var span1 = document.getElementsByClassName("close")[0];
@@ -67,4 +51,6 @@ window.onclick = function(event) {
     modal3.style.display = "none";
   }
 }
+
+
 

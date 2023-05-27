@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TICKET ZONE</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="path/to/aos.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
+  
     <header>
       
         <div class="bars">
             <img src="img/icon.png"class="icon">
-            <a href="#" class="title"><h2>TICKET ZONE</h2></a>
+            <a href="#" class="title">TICKET ZONE</a>
             <a href="#" class="download-button">Download App</a>
             <a href="#" class="bookticket">Book A Ticket</a>
             <a href="#" class="findbus">Find A Bus</a>
@@ -24,7 +29,9 @@
         
           
     </header>   
-    <div class="container">
+
+
+    <div class="container"  data-aos="fade-right">
       <div class="card-box">
         <div class="card-content">
           <h2>New Bus Travel Method</h2>
@@ -42,64 +49,59 @@
     
 
     <div class="info-card-box">
-      <div class="info-card1">
+      <div class="info-card1" data-aos="fade-right">
         <div class="info-card1-image">
           <img src="img/findingbus.jpeg">
         </div>
         <div class="info-card1-content">
-          
-          <h3>TRACK YOUR  BUSES</h3>
+          <h3>TRACK YOUR BUSES</h3>
           <p>Discover the ultimate way to find your bus route and track its live location with our cutting-edge app/website!! </p>
-          
+          <button id="button1">EXPLORE</button>
         </div>
-        <button id="button1" >Click for more</button>
       </div>
-  
-      <div class="info-card2">
+
+      <div class="info-card2" data-aos="fade-down">
         <div class="info-card2-image">
           <img src="img/bookaticket.jpg">
         </div>
-        
         <div class="info-card2-content">
-          
           <h3>BOOK YOUR TICKET</h3>
-          <p>Experience the easiest and most convenient way to book your bus tickets! Introducing our  app/website that lets you book your bus tickets hassle-free, right at your fingertips.</p>
-        
-
+          <p>Experience the easiest and most convenient way to book your bus tickets! Introducing our website that lets you book your bus tickets hassle-free.</p>
+          <button id="button2">EXPLORE</button>
         </div>
-        <button id="button2">Click for more</button>
       </div>
-      
-      <div class="info-card3">
+
+      <div class="info-card3" data-aos="fade-left">
         <div class="info-card3-image">
           <img src="img/maps.jpg">
         </div>
         <div class="info-card3-content">
-          
           <h3>STORING YOUR DATA</h3>
           <p>Store your user data, including your name, contact details, and payment information, making your booking process quicker and more efficient.</p>
-          
+          <button id="button3">EXPLORE</button>
         </div>
-        <button id="button3">Click for more</button>
       </div>
-      </div>
+
+
+
       <div class="container2">
           
           <div id="modal1" class="modal">
             <div class="modal-content">
               <span class="close">&times;</span>
-              <div class="modal-child"><div class="modal-child">
+              <div class="modal-child">
                 <ul>
-                  <h1>Discover the Ultimate Way to Find Your Bus Route and Track Its Live Location</h1><br><br>
-                  <h3>Say goodbye to uncertainty and hello to seamless travel planning. Here's why our platform is your go-to solution:</h3><br><br>
-                  <li>Effortless Route Planning: Our app/website provides a user-friendly interface that allows you to effortlessly plan your bus route. Enter your starting point and destination, and our intelligent system will generate the most efficient and convenient bus route options for you.</li>
-                  <li>Real-Time Bus Tracking: No more waiting in uncertainty! Our innovative technology enables you to track the live location of your bus in real time. Simply open our app/website and get instant updates on the bus's current position, ensuring you're always aware of its whereabouts.</li>
-                  <li>Estimated Arrival Times: Worried about missing your bus? Our app/website provides accurate estimated arrival times, so you can plan your journey accordingly. Stay informed and be at the bus stop just in time to catch your ride.</li>
-                  <li>Interactive Maps: Visualize your bus route with interactive maps on our app/website. See the entire route, including stops, landmarks, and any diversions, all at your fingertips. Effortlessly navigate unfamiliar areas and reach your destination stress-free.</li>
-                  <li>Alerts and Notifications: Stay connected and informed with our timely alerts and notifications. Receive updates on any changes to your bus route, including delays, diversions, or cancellations. Our system ensures you're always in the loop, empowering you to make informed decisions.</li>
-                  <li>User-Friendly Experience: We've designed our app/website with you in mind. Enjoy a seamless and intuitive user experience, enabling you to find your bus route and track its live location with ease. Our interface is designed to make your journey planning a breeze.</li>
-                </ul>
-              </div></div>
+                  <h1>DISCOVER THE ULTIMATE WAY TO FIND YOUR BUS ROUTE AND TRACK ITS LIVE LOCATION</h1><br><br>
+                  <h3>SAY GOODBYE TO UNCERTAINTY AND HELLO TO SEAMLESS TRAVEL PLANNING. HERE'S WHY OUR PLATFORM IS YOUR GO-TO SOLUTION:</h3><br><br>
+                  <li>EFFORTLESS ROUTE PLANNING: OUR APP/WEBSITE PROVIDES A USER-FRIENDLY INTERFACE THAT ALLOWS YOU TO EFFORTLESSLY PLAN YOUR BUS ROUTE. ENTER YOUR STARTING POINT AND DESTINATION, AND OUR INTELLIGENT SYSTEM WILL GENERATE THE MOST EFFICIENT AND CONVENIENT BUS ROUTE OPTIONS FOR YOU.</li>
+                  <li>REAL-TIME BUS TRACKING: NO MORE WAITING IN UNCERTAINTY! OUR INNOVATIVE TECHNOLOGY ENABLES YOU TO TRACK THE LIVE LOCATION OF YOUR BUS IN REAL TIME. SIMPLY OPEN OUR APP/WEBSITE AND GET INSTANT UPDATES ON THE BUS'S CURRENT POSITION, ENSURING YOU'RE ALWAYS AWARE OF ITS WHEREABOUTS.</li>
+                  <li>ESTIMATED ARRIVAL TIMES: WORRIED ABOUT MISSING YOUR BUS? OUR APP/WEBSITE PROVIDES ACCURATE ESTIMATED ARRIVAL TIMES, SO YOU CAN PLAN YOUR JOURNEY ACCORDINGLY. STAY INFORMED AND BE AT THE BUS STOP JUST IN TIME TO CATCH YOUR RIDE.</li>
+                  <li>INTERACTIVE MAPS: VISUALIZE YOUR BUS ROUTE WITH INTERACTIVE MAPS ON OUR APP/WEBSITE. SEE THE ENTIRE ROUTE, INCLUDING STOPS, LANDMARKS, AND ANY DIVERSIONS, ALL AT YOUR FINGERTIPS. EFFORTLESSLY NAVIGATE UNFAMILIAR AREAS AND REACH YOUR DESTINATION STRESS-FREE.</li>
+                  <li>ALERTS AND NOTIFICATIONS: STAY CONNECTED AND INFORMED WITH OUR TIMELY ALERTS AND NOTIFICATIONS. RECEIVE UPDATES ON ANY CHANGES TO YOUR BUS ROUTE, INCLUDING DELAYS, DIVERSIONS, OR CANCELLATIONS. OUR SYSTEM ENSURES YOU'RE ALWAYS IN THE LOOP, EMPOWERING YOU TO MAKE INFORMED DECISIONS.</li>
+                  <li>USER-FRIENDLY EXPERIENCE: WE'VE DESIGNED OUR APP/WEBSITE WITH YOU IN MIND. ENJOY A SEAMLESS AND INTUITIVE USER EXPERIENCE, ENABLING YOU TO FIND YOUR BUS ROUTE AND TRACK ITS LIVE LOCATION WITH EASE. OUR INTERFACE IS DESIGNED TO MAKE YOUR JOURNEY PLANNING A BREEZE.</li>
+                  
+                 </ul>
+              </div>
             </div>
           </div>
           
@@ -142,15 +144,18 @@
               </div>
             </div>
         </div>
-
-
-   
-    
         
-  <body>
-   
-     
-    <script src="script.js"></script>    
+    
+    <script src="script.js"></script> 
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+      <script src="path/to/aos.js"></script>
+      <script>
+         AOS.init({
+          duration: 1500,
+          })
+      </script>
 </body>
 
   
