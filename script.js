@@ -1,3 +1,7 @@
+
+
+
+
 var button1 = document.getElementById('button1');
 var modal1 = document.getElementById("modal1");
 var span1 = document.getElementsByClassName("close")[0];
