@@ -57,4 +57,22 @@ window.onclick = function(event) {
 }
 
 
+var button4 = document.getElementById('button4');
+var modal4 = document.getElementById("modal4");
+var span4 = document.getElementsByClassName("close")[3];
+
+button4.onclick = function() {
+  modal4.style.display = "block";
+}
+
+span4.onclick = function() {
+  modal4.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal4) {
+    modal4.style.display = "none";
+  }
+}
+
 
