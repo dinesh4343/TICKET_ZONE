@@ -159,7 +159,7 @@ background-color: #6AA4C8;
 #login{
 position: absolute;
 right: 140px;
-top: 80px;
+top: 75px;
 color: #E6E2C3;
 font-family: Arial, sans-serif;
 background-color: #EA5455;
@@ -179,15 +179,43 @@ display: block;
 position: relative;
 top: 40px;
 left: 0;
-z-index: 2;
 -webkit-user-select: none;
 user-select: none;
+}
+#menu
+{
+display: flex;
+flex-direction: column;
+position: absolute;
+height: 700px;
+width: 500px;
+margin: -100px 0 0 -50px;
+padding: 50px;
+padding-top: 50px;
+top: 178px;
+background-color: #EA5455;
+list-style-type:none;
+-webkit-font-smoothing: antialiased;  
+transform-origin: 0% 0%;
+transform: translate(-100%, 0);
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+clip-path: ellipse(70% 100% at 0% 50%);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+z-index: 4;
+
+
+
 }
 
 #menu a
 {
 text-decoration: none;
-color: #232323;
+font-weight: bold;
+padding: 10px 0;
+color: #f5f5f5;
+text-decoration: none;
+font-size: 30px;
+padding-bottom: 70px;
 
 }
 
@@ -252,10 +280,7 @@ transform-origin: 0% 0%;
 transform-origin: 0% 100%;
 }
 
-/* 
-* Transform all the slices of hamburger
-* into a crossmark.
-*/
+
 #menuToggle input:checked ~ span
 {
 opacity: 1;
@@ -263,53 +288,20 @@ transform: rotate(45deg) translate(-2px, -1px);
 background: #232323;
 }
 
-/*
-* But let's hide the middle one.
-*/
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
 opacity: 0;
 transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
-* Ohyeah and the last one should go the other direction
-*/
+
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
 transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
-* Make this absolute positioned
-* at the top left of the screen
-*/
-#menu
-{
-display: flex;
-flex-direction: column;
-position: absolute;
-height: 500px;
-width: 500px;
-margin: -100px 0 0 -50px;
-padding: 50px;
-padding-top: 50px;
-top: 178px;
-background: #ededed;
-list-style-type:none;
--webkit-font-smoothing: antialiased;  
-transform-origin: 0% 0%;
-transform: translate(-100%, 0);
-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-z-index: 1;
-clip-path: ellipse(70% 100% at 0% 50%);
-}
 
-#menu a
-{
-top: 100px;
-font-size: 22px; 
-}
+
 
 #menuToggle input:checked ~ ul
 {
@@ -941,7 +933,19 @@ cursor: pointer;
 
 
 
+@media only screen and (max-width: 1050px){
+.findbus{
 
+  top: 20px;
+  right: 430px;
+ 
+}
+.bookticket{
+  right: 430px;
+  top: 60px;
+  
+}
+}
 
 
 
