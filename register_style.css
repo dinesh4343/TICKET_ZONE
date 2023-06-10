@@ -419,8 +419,7 @@ body{
 }
 
 #register_form input[type="text"],
-
-#register_form input[type="tel"],
+#register_form input[type="number"],
 #register_form input[typr="address"] {
   width: 90%;
   padding: 10px;
@@ -432,7 +431,7 @@ body{
 }
 
 #register_form input[type="text"]:focus,
-#register_form input[type="tel"]:focus,
+#register_form input[type="number"]:focus,
 #register_form textarea:focus {
   border-color: #0078ff;
 }
@@ -491,7 +490,7 @@ h2 {
 
 input[type="email"],
 input[type="password"] 
-#register_form input[type="number"]{
+#register_form input[type="tel"]{
   width: 50%;
   padding: 10px;
   border: 1px solid #ccc;
