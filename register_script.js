@@ -12,7 +12,7 @@ function storeData() {
     console.log("Address:", address);
     console.log("Gender:", gender);
   
-    realtimeDB.ref("data").push({
+    realtimeDB.ref("USERS").push({
       name: name,
       age: age,
       mobileNo: mobileNo,

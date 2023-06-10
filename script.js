@@ -1,7 +1,3 @@
-
-
-
-
 var button1 = document.getElementById('button1');
 var modal1 = document.getElementById("modal1");
 var span1 = document.getElementsByClassName("close")[0];
@@ -75,4 +71,16 @@ window.onclick = function(event) {
   }
 }
 
+
+// Get the menu toggle checkbox element
+const menuToggle = document.querySelector('#menuToggle input');
+
+// Add click event listener to the document
+document.addEventListener('click', function(event) {
+  // Check if the clicked element is inside the menu or menu toggle
+  if (!event.target.closest('#menu') && !event.target.closest('#menuToggle')) {
+    // Uncheck the menu toggle checkbox to close the menu
+    menuToggle.checked = false;
+  }
+});
 
