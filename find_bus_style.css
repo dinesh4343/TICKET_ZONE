@@ -498,6 +498,9 @@ body {
 }
 
 h1 {
+
+    position: relative;
+    top: 200px;
   text-align: center;
   font-size: 28px;
   font-weight: bold;
@@ -538,10 +541,10 @@ button {
 
 .search{
   position: relative;
-  top: 50px;
+  top: 300px;
   padding:20px;
-  left: 30%;
-  width: 40%;
+  left: 34%;
+  width: 30%;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
@@ -550,7 +553,7 @@ button {
 
 .foot{
   position: relative;
-  top: 50%;
+  top: 400px;
   }
    
   .footer{
@@ -609,4 +612,3 @@ button {
     margin:0% 3%;
     }
     }
-  
