@@ -80,7 +80,7 @@ function storeData() {
 
 
 
-    const menuToggle = document.querySelector('#menuToggle input');
+const menuToggle = document.querySelector('#menuToggle input');
 
 // Add click event listener to the document
 document.addEventListener('click', function(event) {
