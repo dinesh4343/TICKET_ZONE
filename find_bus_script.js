@@ -26,7 +26,6 @@ function checkBusNumber(busNumber) {
         }
     });
 }
-
 const menuToggle = document.querySelector('#menuToggle input');
 
 // Add click event listener to the document
