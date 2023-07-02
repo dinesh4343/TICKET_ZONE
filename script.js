@@ -72,15 +72,34 @@ window.onclick = function(event) {
 }
 
 
-// Get the menu toggle checkbox element
-const menuToggle = document.querySelector('#menuToggle input');
 
-// Add click event listener to the document
-document.addEventListener('click', function(event) {
-  // Check if the clicked element is inside the menu or menu toggle
-  if (!event.target.closest('#menu') && !event.target.closest('#menuToggle')) {
-    // Uncheck the menu toggle checkbox to close the menu
-    menuToggle.checked = false;
+function openNav() {
+  document.getElementById("mySidebar").style.width = "450px";
+  document.getElementById("main").style.marginLeft = "350px";
+
+  // Add click event listener to the document
+  document.addEventListener('click', closeNavOnClickOutside);
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+
+  // Remove the click event listener from the document
+  document.removeEventListener('click', closeNavOnClickOutside);
+}
+
+function closeNavOnClickOutside(event) {
+  var nav = document.getElementById("mySidebar");
+  var openButton = document.getElementById("openButton");
+
+  if (
+    event.target !== nav &&
+    event.target !== openButton &&
+    !nav.contains(event.target) &&
+    !openButton.contains(event.target)
+  ) {
+    closeNav();
   }
-});
+}
 
