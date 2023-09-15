@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+
+*{
+  font-family: poppins, monospace;
+}
+
+body{
+    background-color: #F6F1F1;
+}
+
+
+
+
+
+  :focus {
+    border: 0 !important;
+    box-shadow: 0 0 0 transparent !important;
+  }
+  
+  *:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px !important;
+  }
+  .card-container-mob{
+    display: none;
+  }
+  .card-container {
+    position: relative;
+    top: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    max-width: 100% !important;
+    padding: 50px 0;
+    
+  }
+  
+  .card-box img {
+    width: 500px;
+    height: auto;
+    filter: drop-shadow(10px 10px 30px #00000049);
+    transition: all 0.75s ease-in-out;
+  }
+  .card-content h2 {
+    font-weight:bolder;
+    color: #FFFF00;
+   
+  }
+  .card-content p {
+    
+    font-weight: 700;
+    color: #ffff ;
+    text-align: justify;
+    word-spacing: 4px;
+    margin-right: 200px;
+  }
+
+  .card-box {
+    padding: 20px 50px;
+    width: 700px;
+    height: 540px;
+    transition-delay: 1s;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .card-box::after {
+    content: "";
+    position: absolute;
+    background-color: #f7efe5;
+    height: 350px;
+    width: 350px;
+    z-index: -1;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+  }
+  .card-content {
+    
+    width: 100%;
+    scale: 1;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .card-box:hover .card-content {
+    transition: all 1  ease-in-out;
+    min-width: 150px;
+    scale: 1;
+  }
+  .card-box:hover .card-content {
+    transition-delay: 0.5s;
+    opacity: 1;
+  }
+  .card-box:hover {
+    width: 5000px;
+  }
+  .card-box:hover::after {
+    scale: 20;
+    background-color: #EA5455;
+    transition: all 1s ease-in-out;
+  }
+  .card-box:hover img {
+    scale: 1.8;
+  }
+
+
+
+
+  @media screen and (min-width: 250px) and (max-width: 900px) {
+    .card-container{
+      display: none;
+    }
+   .card-container-mob {
+    position: relative;
+    top: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    max-width: 100% !important;
+    padding: 50px 0;
+    
+  }
+  
+  .card-box-mob img {
+    width: 500px;
+    height: auto;
+    filter: drop-shadow(10px 10px 30px #00000049);
+    transition: all 0.75s ease-in-out;
+  }
+  .card-content-mob h2 {
+    font-weight:bolder;
+    color: #FFFF00;
+   
+  }
+  .card-content-mob-mob p {
+    
+    font-weight: 700;
+    color: #ffff ;
+    text-align: justify;
+    word-spacing: 4px;
+
+  }
+
+  .card-box-mob{
+    padding: 20px 50px;
+    width: 700px;
+    height: 540px;
+    transition-delay: 1s;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .card-box-mob::after {
+    content: "";
+    position: absolute;
+    background-color: #f7efe5;
+    height: 350px;
+    width: 350px;
+    z-index: -1;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+  }
+  .card-content-mob{
+    
+    width: 100%;
+    scale: 1;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+  }
+  
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .service{
+    position: relative;
+    
+    background-color: #B1003C; /* Replace with your desired background color */
+    color: #FFFFFF; /* Replace with your desired text color */
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .info-cards{
+    position: relative;
+  margin-top: 120px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+   margin-bottom: 300px;
+  }
+  
+  .info-card {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    
+  }
+  
+  .flip-card {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    
+  }
+  
+  
+  .info-card:hover .flip-card {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-front,
+  .flip-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 50px;
+  }
+  
+  .flip-front {
+    background: linear-gradient(to right, #a6a6a6, #fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .flip-front p{
+    position: absolute;
+    font-weight: bolder;
+    bottom: 20px;
+  }
+  
+  .flip-back {
+    background: linear-gradient(to right, #B00, #032146);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    color: #fff;
+    font: 1rem sans-serif;
+  }
+  
+  .flip-back p {
+    padding: 1rem;
+  }
+  
+
+  #button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50; /* Green */
+    color: #ffffff; /* White */
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.3s ease;
+    }
+    
+    #button1:hover,#button2:hover,#button3:hover,#button4:hover {
+    background-color: #45a049; 
+    }
+    
+    #button1:active,#button2:active,#button3:active,#button4:active {
+    background-color: #3e8e41; 
+    }
+
+    
+.modal-content{
+  position: relative;
+  top: 100px;
+  text-align: justify;
+  color: #032146;
+  border-radius: 20px;
+ width: auto;
+ right:200px;
+
+
+
+  
+}
+.modal-body{
+  width: 1000px;
+  
+}
+
+.modal-content ul{
+  text-align: justify;
+
+}
+
+
+
+@media screen and (min-width: 250px) and (max-width: 1500px) {
+
+
+    .info-cards{
+      justify-content: space-evenly;
+
+    }
+    .info-card {
+      width: 220px;
+      height: 250px;
+      margin: 10px;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    .flip-back {
+      background: linear-gradient(to right, #B00, #032146);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: rotateY(180deg);
+      color: #fff;
+      font: 0.8rem sans-serif;
+    }
+    #button{
+      padding: 2px 8px;
+    }
+    .modal-content{
+      height: 400px;
+      width: 500px;
+      right: 0;
+      margin:10px
+      
+    }
+    .modal-body{
+      overflow: scroll;
+      height: 10px;
+     width: auto;
+      right: 0%;
+    }
+   
+}
+
+
+
+
+
+

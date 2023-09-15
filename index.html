@@ -2,95 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TICKET ZONE</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="path/to/aos.css">
-        
-<!--FONT AWESOME-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!--GOOGLE FONTS-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="assests/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  
-    <header>
-      
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
-  
-      
+   
 
-        <div class="bars">
-          <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon1" viewBox="0 0 16 16">
-            <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H7Zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9c1.876 0 3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44.303 44.303 0 0 0 8 4Zm0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44.304 44.304 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43.306 43.306 0 0 0 8 3Z"/>
-            <path d="M15 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1V2.64c0-1.188-.845-2.232-2.064-2.372A43.61 43.61 0 0 0 8 0C5.9 0 4.208.136 3.064.268 1.845.408 1 1.452 1 2.64V4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v3.5c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2V8ZM8 1c2.056 0 3.71.134 4.822.261.676.078 1.178.66 1.178 1.379v8.86a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5V2.64c0-.72.502-1.301 1.178-1.379A42.611 42.611 0 0 1 8 1Z"/>
-            </svg>
-            <a href="index.html" class="title">TICKET ZONE</a></div>
-            <a href="#" class="download-button">
-              Download App
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
-              <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
-            </svg>
-            </a>
+
+      <nav class="header-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon1" viewBox="0 0 16 16">
+          <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H7Zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9c1.876 0 3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44.303 44.303 0 0 0 8 4Zm0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44.304 44.304 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43.306 43.306 0 0 0 8 3Z"/>
+          <path d="M15 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1V2.64c0-1.188-.845-2.232-2.064-2.372A43.61 43.61 0 0 0 8 0C5.9 0 4.208.136 3.064.268 1.845.408 1 1.452 1 2.64V4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v3.5c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2V8ZM8 1c2.056 0 3.71.134 4.822.261.676.078 1.178.66 1.178 1.379v8.86a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5V2.64c0-.72.502-1.301 1.178-1.379A42.611 42.611 0 0 1 8 1Z"/>
+          </svg>
+        <div class="branding">
             
-            <a href="#" class="bookticket">Book A Ticket</a>
-            <a href="find_bus_index.html" class="findbus">Find A Bus</a>
-              <a href="#" class="profile-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                </svg>
-              </a>            
-            <a href="register_index.html" target="_blank" class="signin">Sign Up</a>
-            <a href="#" id="login">Login</a>    
-              
-        
+            <h1 class="brand-name">TICKET ZONE</h1>
         </div>
-          
 
-    </header> 
+        <div class="nav-buttons">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="book-a-ticket.html">Book A Ticket</a>
+          <a class="nav-link active" aria-current="page" href="find-a-bus.html">Find A Bus</a>
+       
+        </div>
+        <a href="#" class="download-button">
+          Download App
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+          <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
+        </svg>
+        </a>
+        <a href="#"  id="profile-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+          </svg>
+        </a>   
     
-    <div class="nav">
-      
-      <div id="mySidebar" class="sidebar">
-        
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="#"> BOOK A TICKET</a>
-        <a href="find_bus_index.html">FIND A BUS</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-      </div>
-  
-      
-    </div>
-         
-    <div class="container"  data-aos="fade-right">
-      <div class="card-box">
-        <div class="card-content">
-          <h2>New Bus Travel Method</h2>
-          <p>
-              India's leading provider of bus transportation technology is TICKET ZONE in your city.Streamline your journey, with our
-              TICKET ZONE App and live bus tracking on the TICKET ZONE App. 
-              Your one-stop shop for an easy and convenient travel experience
-          </p>
-          <button class="btn btn-info">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
-              <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
-            </svg>Download App
-          </button>
-        </div>
-        <img class="card-image" src="img/g4.jpg">
+    </nav>
 
-        </div>
+    <div class="nav-buttons-mobile hidden-nav">
+      
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="book-a-ticket.html" class="nav-btn">Book A Ticket</a>
+      <a href="find-a-bus.html" class="nav-btn">Find A Bus</a>
+      <a href="#" class="nav-btn">Home</a>
+   
+       
     </div>
+
+    <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+
+  
+
+
+
+      <div class="card-container"  data-aos="fade-right">
+        <div class="card-box">
+          <div class="card-content">
+            <h2>New Bus Travel Method</h2>
+            <p>
+                India's leading provider of bus transportation technology is TICKET ZONE in your city.Streamline your journey, with our
+                TICKET ZONE App and live bus tracking on the TICKET ZONE App. 
+                Your one-stop shop for an easy and convenient travel experience
+            </p>
+          
+          </div>
+          <img class="card-image" src="assests/g4.jpg">
+  
+          </div>
+      </div>
+   
+      <div class="card-container-mob"  data-aos="fade-right">
+        <div class="card-box-mob">
+          <div class="card-content-mob">
+            <h2>New Bus Travel Method</h2>
+            <p>
+                India's leading provider of bus transportation technology is TICKET ZONE in your city.Streamline your journey, with our
+                TICKET ZONE App and live bus tracking on the TICKET ZONE App. 
+                Your one-stop shop for an easy and convenient travel experience
+            </p>
+          
+          </div>
+          <img class="card-image-mob" src="assests/g4.jpg">
+  
+          </div>
+      </div>
+
+
+
+
 
     <div class="service">
       <p>
@@ -98,13 +108,12 @@
       </p>
     </div>
 
-    
     <div class=info-cards data-aos="fade-up">
       <div class="info-card">
         <div class="flip-card">
           <div class="flip-front">
             <!-- front side of the card -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="50" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
                 <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
                 <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
               </svg>
@@ -116,10 +125,13 @@
             <p>
                 Discover the ultimate way to find your bus route and track its live location with our cutting-edge app/website!!
             </p>
-            <button id="button1">EXPLORE</button>
+            <button type="button" class="btn btn-primary" id="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+              EXPLORE
+            </button>
           </div>
         </div>
       </div>
+
     
       <div class="info-card">
         <div class="flip-card">
@@ -135,7 +147,9 @@
             <p>
                 Experience the easiest and most convenient way to book your bus tickets! Introducing our website that lets you book your bus tickets hassle-free.
             </p>
-            <button id="button2">EXPLORE</button>
+            <button type="button" class="btn btn-primary" id="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+              EXPLORE
+            </button>
           </div>
         </div>
       </div>
@@ -157,7 +171,9 @@
             <p>
                 Introducing our new and convenient way of ticketing - QR tickets! .With QR tickets, accessing your favorite events has never been easier..
             </p>
-            <button id="button3">EXPLORE</button>
+            <button type="button" class="btn btn-primary" id="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+              EXPLORE
+            </button>
           </div>
         </div>
       </div>
@@ -178,24 +194,24 @@
             <p>
                 Store your user data, including your name, contact details, and payment information, making your booking process quicker and more efficient.
             </p>
-            <button id="button4">EXPLORE</button>
+            <button type="button" class="btn btn-primary" id="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
+              EXPLORE
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-
-
-
-    <div class="container2">
-          
-      <div id="modal1" class="modal">
+    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <span class="close">&times;</span>
-          <div class="modal-child">
-            <ul>
-              <h1>DISCOVER THE ULTIMATE WAY TO FIND YOUR BUS ROUTE AND TRACK ITS LIVE LOCATION</h1><br><br>
-              <h3>SAY GOODBYE TO UNCERTAINTY AND HELLO TO SEAMLESS TRAVEL PLANNING. HERE'S WHY OUR PLATFORM IS YOUR GO-TO SOLUTION:</h3><br><br>
+          <div class="modal-header">
+            <h4 style="text-align: left;">DISCOVER THE ULTIMATE WAY TO FIND YOUR BUS ROUTE AND TRACK ITS LIVE LOCATION</h4>
+
+          </div>
+          <div class="modal-body">
+           <ul>
+
               <li>Effortless route planning: our app/website provides a user-friendly interface that allows you to effortlessly plan your bus route. enter your starting point and destination, and our intelligent system will generate the most efficient and convenient bus route options for you.</li>
               <li>Real-time bus tracking: no more waiting in uncertainty! our innovative technology enables you to track the live location of your bus in real time. simply open our app/website and get instant updates on the bus's current position, ensuring you're always aware of its whereabouts.</li>
               <li>Estimated arrival times: worried about missing your bus? our app/website provides accurate estimated arrival times, so you can plan your journey accordingly. stay informed and be at the bus stop just in time to catch your ride.</li>
@@ -205,17 +221,23 @@
               <li>Interactive maps: visualize your bus route with interactive maps on our app/website. see the entire route, including stops, landmarks, and any diversions, all at your fingertips. effortlessly navigate unfamiliar areas and reach your destination stress-free.</li>
              </ul>
           </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+          </div>
         </div>
       </div>
-      
-      <div id="modal2" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div class="modal-child">
-            <ul>
-              <h1>EXPERIENCE THE EASIEST AND MOST CONVENIENT WAY TO BOOK YOUR BUS TICKETS!!</h1><br><br>
-              <h3>OUR STATE-OF-THE-ART APP/WEBSITE THAT LETS YOU BOOK YOUR BUS TICKETS HASSLE-FREE, RIGHT AT YOUR FINGERTIPS.</h2>
-              <h3>WASTE TIME STANDING IN LONG QUEUES OR MAKING PHONE CALLS WHEN YOU CAN BOOK YOUR TICKETS IN JUST A FEW SIMPLE STEPS? WITH OUR APP/WEBSITE, YOU CAN:</h2><br><br>
+    </div>
+    
+
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="model">
+          <div class="modal-header">
+            <h4 style="text-align: left;"> EXPERIENCE THE EASIEST AND MOST CONVENIENT WAY TO BOOK YOUR BUS TICKETS!!</h4>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
               <li>Browse and Select: Explore a wide range of bus routes, schedules, and operators. Find the perfect option that fits your travel plans.</li>
               <li>Real-time Availability: Get instant updates on seat availability and choose your preferred seat from an interactive seating chart. No more guesswork or disappointment!</li>
               <li>Easy Booking Process: Our user-friendly interface makes booking a breeze. Enter your departure and destination points, select your travel date, and let our app/website handle the rest.</li>
@@ -223,102 +245,112 @@
               <li>Digital Tickets: Say goodbye to paper tickets! Receive your e-ticket directly on your app/website, eliminating the hassle of carrying physical copies. It's convenient, eco-friendly, and always accessible.</li>
               <li>Real-time Updates: Stay informed with real-time updates on bus timings, delays, or cancellations. Get notified via push notifications, SMS, or email, ensuring a smooth and stress-free journey.</li>
               <li>24/7 Customer Support: Have any questions or need assistance? Our dedicated customer support team is available 24/7 to help you with any queries, ticket changes, or cancellations.</li>
-          </ul></div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+   
+          </div>
         </div>
       </div>
-      
-      <div id="modal3" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-child">
-              <ul>
-                <h1>The beauty of QR tickets lies in their simplicity and efficiency.</h1><br>
-                <h3>imply save the ticket on your phone or print it out, and when you arrive at the event, our staff will scan the QR code using a dedicated scanner. Within seconds, you're granted hassle-free entry, skipping the need for manual ticket checks and paper-based processes.</h3><br>
-                <li>QR tickets utilize Quick Response (QR) codes, which are scannable square codes that contain all the necessary information about your ticket. When you purchase a ticket through our website or mobile app, a unique QR code is generated and delivered to you instantly via email or accessible through your account.</li>
-                <li>The beauty of QR tickets lies in their simplicity and efficiency. Simply save the ticket on your phone or print it out, and when you arrive at the event, our staff will scan the QR code using a dedicated scanner. Within seconds, you're granted hassle-free entry, skipping the need for manual ticket checks and paper-based processes.</li>
-                <li>QR tickets offer numerous benefits for event-goers. Firstly, they provide a contactless and secure ticketing experience, ensuring a seamless entry process while prioritizing the health and safety of all attendees. No need to worry about misplaced or damaged tickets anymore - your QR code is conveniently stored on your device.</li>
-                <li>Additionally, QR tickets save you valuable time. Gone are the days of fumbling through your bag or wallet to find your ticket. With a simple scan, you're in! Say goodbye to long wait times and hello to more time enjoying the event.</li>
-                <li>QR tickets also contribute to sustainability efforts. By reducing paper waste associated with traditional ticketing, you're actively participating in environmental conservation.</li>
-                <li>Join the QR ticket revolution and embrace the future of ticketing. Experience the speed, convenience, and security that QR tickets offer. Purchase your tickets today and get ready for a seamless and memorable event experience!</li>
-              </ul>
-              
-            </div>
-          </div>
-        </div>
-        <div id="modal4" class="modal">
-          <div class="modal-content">
-              <span class="close">&times;</span>
-              <div class="modal-child">
-               
-                
-                <ul>
-                  <h1>CONVENIENCE: SAY GOODBYE TO THE HASSLE OF REPEATEDLY ENTERING YOUR INFORMATION EVERY TIME YOU BOOK A BUS TICKET.</h1><br><br>
-                  <h3>PERSONALIZATION: OUR PLATFORM LETS YOU SAVE YOUR TRAVEL DETAILS, INCLUDING YOUR PREFERRED ROUTES AND SEAT PREFERENCES. THIS WAY, OUR APP/WEBSITE CAN PERSONALIZE YOUR TRAVEL EXPERIENCE AND OFFER YOU CUSTOMIZED OPTIONS THAT CATER TO YOUR NEEDS.</h3><br><br>
-                  <li>Our app/website allows you to store your user data, including your name, contact details, and payment information, making your booking process quicker and more efficient</li>
-                  <li>Time-Saving: With our app/website, you don't have to waste time searching for your previous travel details or digging through old emails. </li>
-                  <li>Your travel information is saved in one place, making it easy for you to retrieve and reuse for future trips.</li>
-                  <li>Security: We understand that your privacy and security are of utmost importance. That's why our app/website uses the latest encryption technology to safeguard your user data and travel information. You can rest assured that your data is safe with us.</li>
-                  <li>Accessibility: Whether you're on the go or at home, you can access your stored user data and travel details from anywhere, anytime. Our app/website is available 24/7, ensuring that your information is always within reach.</li>
-                  <li>Efficient Support: Our customer support team is always ready to assist you with any queries or issues related to your user data or travel details. With our platform, you can expect prompt and efficient support whenever you need it.</li>
-                  <li>Seamless Booking: Our app/website simplifies the booking process, making it a seamless and stress-free experience. With your user data and travel details already stored, booking a bus ticket is just a few clicks away.</li>
-                </ul>
-                
-              </div>
-            </div>
-          </div>
     </div>
 
 
+
+    <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 style="text-align: left;"> The beauty of QR tickets lies in their simplicity and efficiency.</h4>
+           
+          </div>
+          <div class="modal-body">
+            <li>QR tickets utilize Quick Response (QR) codes, which are scannable square codes that contain all the necessary information about your ticket. When you purchase a ticket through our website or mobile app, a unique QR code is generated and delivered to you instantly via email or accessible through your account.</li>
+            <li>The beauty of QR tickets lies in their simplicity and efficiency. Simply save the ticket on your phone or print it out, and when you arrive at the event, our staff will scan the QR code using a dedicated scanner. Within seconds, you're granted hassle-free entry, skipping the need for manual ticket checks and paper-based processes.</li>
+            <li>QR tickets offer numerous benefits for event-goers. Firstly, they provide a contactless and secure ticketing experience, ensuring a seamless entry process while prioritizing the health and safety of all attendees. No need to worry about misplaced or damaged tickets anymore - your QR code is conveniently stored on your device.</li>
+            <li>Additionally, QR tickets save you valuable time. Gone are the days of fumbling through your bag or wallet to find your ticket. With a simple scan, you're in! Say goodbye to long wait times and hello to more time enjoying the event.</li>
+            <li>QR tickets also contribute to sustainability efforts. By reducing paper waste associated with traditional ticketing, you're actively participating in environmental conservation.</li>
+            <li>Join the QR ticket revolution and embrace the future of ticketing. Experience the speed, convenience, and security that QR tickets offer. Purchase your tickets today and get ready for a seamless and memorable event experience!</li>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 style="text-align: left;">PERSONALIZATION: OUR PLATFORM LETS YOU SAVE YOUR TRAVEL DETAILS, INCLUDING YOUR PREFERRED ROUTES AND SEAT PREFERENCES.</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <li>Our app/website allows you to store your user data, including your name, contact details, and payment information, making your booking process quicker and more efficient</li>
+            <li>Time-Saving: With our app/website, you don't have to waste time searching for your previous travel details or digging through old emails. </li>
+            <li>Your travel information is saved in one place, making it easy for you to retrieve and reuse for future trips.</li>
+            <li>Security: We understand that your privacy and security are of utmost importance. That's why our app/website uses the latest encryption technology to safeguard your user data and travel information. You can rest assured that your data is safe with us.</li>
+            <li>Accessibility: Whether you're on the go or at home, you can access your stored user data and travel details from anywhere, anytime. Our app/website is available 24/7, ensuring that your information is always within reach.</li>
+            <li>Efficient Support: Our customer support team is always ready to assist you with any queries or issues related to your user data or travel details. With our platform, you can expect prompt and efficient support whenever you need it.</li>
+            <li>Seamless Booking: Our app/website simplifies the booking process, making it a seamless and stress-free experience. With your user data and travel details already stored, booking a bus ticket is just a few clicks away.</li>
+          
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <footer>
+      <div class="footer">
+      <div class="footer-row">
+      <a href="#"><i class="facebook"></i><svg xmlns="http://www.w3.org/2000/svg" width="70" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+      </svg></a>
+      <a href="#"><i class="instagram"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+      </svg></i></a>
+      <a href="#"><i class="youtube"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+      </svg></i></a>
+      <a href="#"><i class="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+      </svg></i></a>
+      </div>
       
-    
-    
-    <script src="script.js"></script> 
-    
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-      <script src="path/to/aos.js"></script>
-      <script>
-         AOS.init({
-          duration: 1500,
-          })
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-      <script>
-        feather.replace();
-      </script>
+      <div class="footer-row">
+      <ul>
+      <li><a href="#">Contact us</a></li>
+      <li><a href="#">Our Services</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+      <li><a href="#">Career</a></li>
+      </ul>
+      </div>
+      
+      <div class="footer-row">
+      Copyright © 2023- All rights reserved || Designed By: Team Coders
+      </div>
+      </div>
+      </footer>
+
 </body>
-<footer>
-  <div class="footer">
-  <div class="row">
-  <a href="#"><i class="facebook"></i><svg xmlns="http://www.w3.org/2000/svg" width="70" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-  </svg></a>
-  <a href="#"><i class="instagram"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-  </svg></i></a>
-  <a href="#"><i class="youtube"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
-  </svg></i></a>
-  <a href="#"><i class="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-  </svg></i></a>
-  </div>
-  
-  <div class="row">
-  <ul>
-  <li><a href="#">Contact us</a></li>
-  <li><a href="#">Our Services</a></li>
-  <li><a href="#">Privacy Policy</a></li>
-  <li><a href="#">Terms & Conditions</a></li>
-  <li><a href="#">Career</a></li>
-  </ul>
-  </div>
-  
-  <div class="row">
-  Copyright © 2023- All rights reserved || Designed By: Team Coders
-  </div>
-  </div>
-  </footer>
+
 
   
+    
+ 
+  
+
+<script src="script/script.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>
