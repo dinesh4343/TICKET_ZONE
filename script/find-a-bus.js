@@ -37,9 +37,17 @@ document.addEventListener("DOMContentLoaded", function () {
                     let routeInfo = "";
 
                     for (let i = 0; i < foundRows.length; i++) {
-                        let start = foundRows[i][3]; // Starting point
+                        let start = foundRows[i][3]; 
 
-                        routeInfo += `<li></strong> ${start}</li>`;
+                        routeInfo += `<li>
+        
+                        <div class="timeline--circle">       <i></i>
+                        </div>
+                        <div class="timeline--description">
+                        ${start} 
+                        </div>
+                      </li>
+                      `;
                     }
 
                     routeList.innerHTML = routeInfo;
