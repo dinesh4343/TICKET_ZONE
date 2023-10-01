@@ -28,7 +28,7 @@ header {
   justify-content: center;
   align-items: center;
   height: auto; 
-  margin-bottom: 360px;
+  margin-bottom: 260px;
 }
 
 
@@ -75,12 +75,30 @@ input[type="text"] {
   justify-content: center; /* Horizontal centering */
   align-items: center; /* Vertical centering */
 
-
+  cursor: pointer;
 }
 
 
 
+.flex-container {
+  position: relative;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+  height: auto; 
+  margin-bottom: 100px;
+  text-align: center;
 
+}
+
+.box , .box1{
+  flex: 1;
+  margin: 10px;
+  margin-bottom: 20px;
+  padding: 5px;
+ 
+}
 
 
 
