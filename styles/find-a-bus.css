@@ -20,6 +20,107 @@ header {
 .main {
   padding: 20px;
 }
+
+
+#busNumber{
+  border: 1px solid #000;
+}
+
+
+.district-container {
+  position: relative;
+ top: 400px;
+left: 50%;
+ transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin-bottom: 250px;
+}
+@media (max-width: 768px) {
+  /* Adjust styles for screens with a maximum width of 768px */
+  .district-container {
+   
+    position: relative;
+    top: 700px;
+    flex-direction: column; /* Change to column layout on smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+
+
+}
+
+.button-container {
+  text-align: center;
+  margin: 10px;
+}
+
+.rounded-button {
+ 
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rounded-button img {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  border: 8px solid #B1003C;
+}
+
+.rounded-button:hover {
+  transform: scale(1.01);
+}
+
+#backButton {
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  cursor: pointer;
+ 
+display: none;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.back{
+  color: #B1003C;
+}
+.back:hover{
+  color: #2E8B57;
+  transform: scale(1.1);
+  transform: translateY(-3px) scale(1.05);
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  #backButton {
+    top: 50px;
+    left: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #backButton {
+    top: 160px;
+    left: 20px;
+  }
+}
+
+#search{
+  display: none;
+}
+
+
 .search-container {
   position: relative;
   display: flex;
@@ -30,6 +131,7 @@ header {
   height: auto; 
   margin-bottom: 260px;
 }
+
 
 
 label {
@@ -99,8 +201,6 @@ input[type="text"] {
   padding: 5px;
  
 }
-
-
 
 
 

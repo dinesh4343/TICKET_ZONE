@@ -18,9 +18,68 @@ document.addEventListener("DOMContentLoaded", function () {
         const busNumber = busNumberInput.value;
         checkBusNumber(busNumber);
     });
+
+
+    const chennaiButton = document.querySelector(".chennaiButton");
+    const cbeButton = document.querySelector(".cbeButton");
+    const maduraiButton = document.querySelector(".maduraiButton");
+    const searchContainer = document.getElementById("search");
+    const district = document.getElementById("district");
+    const backButton = document.getElementById("backButton");
+
+
+
+    let url="";
+    chennaiButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      toggleSearchContainer();
+      url="lib/bus_stops.csv";
+      backButton.style.display = "block";
+
+    });
+
+    cbeButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      toggleSearchContainer();
+      url="lib/bus_stops_cbe.csv";
+      backButton.style.display = "block";
+    });
+
+    maduraiButton.addEventListener("click", function (event) {
+        alert("Coming soon!");
+    });
+
+    backButton.addEventListener("click", function (event) {
+        back();
+    });
+
+    function toggleSearchContainer() {
+      searchContainer.style.display = "block";
+      district.style.display = "none";
+    }
+    document.getElementById("backButton").addEventListener("click", function () {
+        goBack();
+      });
+  
+      // Function to go back
+      function goBack() {
+        // You can customize this logic to navigate back or perform other actions
+        busNumberInput.value = "";
+        searchContainer.style.display = "none";
+        district.style.display = "block";
+        routeList.innerHTML = "";
+        originBox.textContent = "-";
+        destinationBox.textContent = "-";
+      }
+
+    
+  
+    
 function checkBusNumber(busNumber) {
     $.ajax({
-        url: "lib/bus_stops.csv",
+        url: url,
+        
+        
         dataType: "text",
         success: function (data) {
             let rows = data.split("\n");

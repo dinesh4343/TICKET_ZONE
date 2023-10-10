@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/signup.css">
+    <link rel="stylesheet" href="styles/login.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
@@ -107,63 +107,29 @@
 
 <div>
 
-    <div class="registration-container">
-        <div class="registration-title">User Registration</div>
-        <div class="registration-content">
-            <form action="#">
-                <div class="user-info">
-                    <div class="input-section">
-                        <span class="field-label">Full Name</span>
-                        <input type="text" id="fullName" placeholder="Enter your full name" required>
-
-                    </div>
-                    <div class="input-section">
-                        <span class="field-label">Username</span>
-                        <input type="text" id="username" placeholder="Enter your username" required>
-                    </div>
-                    <div class="input-section">
-                        <span class="field-label" >Email</span>
-                        <input id="email"type="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="input-section">
-                        <span class="field-label" >Phone Number</span>
-                        <input type= "number" id="phoneNumber" placeholder="Enter your phone number" required>
-                    </div>
-                    <div class="input-section">
-                        <span class="field-label" >Password</span>
-                        <input id="password" type="password" placeholder="Enter your password" required>
-                    </div>
-                    <div class="input-section">
-                        <span class="field-label">Confirm Password</span>
-                        <input  id="confirmPassword" type="password" placeholder="Confirm your password" required>
-                    </div>
+    
+            <div class="login-container">
+                <div class="login-title">User Login</div>
+                <div class="login-content">
+                    <form action="#">
+                        <div class="user-info">
+                            <div class="input-section">
+                                <span class="field-label">Username</span>
+                                <input type="text" id="username" placeholder="Enter your username" required>
+                            </div>
+                            <div class="input-section">
+                                <span class="field-label" >Password</span>
+                                <input id="password" type="password" placeholder="Enter your password" required>
+                            </div>
+                        </div>
+                        <div class="login-button">
+                            <input type="submit" value="Login" onclick="handleLogin(event)">
+                        </div>
+                    </form>
                 </div>
-                <div class="gender-info">
-                    <input type="radio" name="userGender" id="maleGender" value="male">
-                    <input type="radio" name="userGender" id="femaleGender" value="female">
-
-                    
-                   
-                    <span class="gender-label">Gender</span>
-                    <div class="gender-options">
-                        <label for="maleGender">
-                            <span class="gender-dot one"></span>
-                            <span class="gender-text">Male</span>
-                        </label>
-                        <label for="femaleGender">
-                            <span class="gender-dot two"></span>
-                            <span class="gender-text">Female</span>
-                        </label>
-                      
-                    </div>
-                </div>
-                <div class="registration-button">
-                    <input type="submit" value="Register" onclick="handleRegistration(event)">
-                </div>
+            </div>
 
                
-            </form>
-        </div>
     </div>
     
 

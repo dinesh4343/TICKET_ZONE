@@ -12,6 +12,10 @@ async function handleRegistration(event) {
 firebase.initializeApp(firebaseConfig);
 const realtimeDB = firebase.database();
 const auth = firebase.auth(); 
+
+
+
+
 document.getElementById('loader-overlay').style.display = 'flex';
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
