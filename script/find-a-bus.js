@@ -23,10 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const chennaiButton = document.querySelector(".chennaiButton");
     const cbeButton = document.querySelector(".cbeButton");
     const maduraiButton = document.querySelector(".maduraiButton");
+    const titleDistrict = document.querySelector(".title-district");
     const searchContainer = document.getElementById("search");
     const district = document.getElementById("district");
     const backButton = document.getElementById("backButton");
-
+    const loaderOverlay = document.getElementById("loader-overlay");
 
 
     let url="";
@@ -35,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleSearchContainer();
       url="lib/bus_stops.csv";
       backButton.style.display = "block";
+      titleDistrict.style.display = "none";
+      showLoader();
 
     });
 
@@ -43,15 +46,15 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleSearchContainer();
       url="lib/bus_stops_cbe.csv";
       backButton.style.display = "block";
+      titleDistrict.style.display = "none";
+      showLoader();
     });
 
     maduraiButton.addEventListener("click", function (event) {
         alert("Coming soon!");
     });
 
-    backButton.addEventListener("click", function (event) {
-        back();
-    });
+
 
     function toggleSearchContainer() {
       searchContainer.style.display = "block";
@@ -59,6 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     document.getElementById("backButton").addEventListener("click", function () {
         goBack();
+        titleDistrict.style.display = "block";
+        showLoader();
       });
   
       // Function to go back
@@ -70,9 +75,15 @@ document.addEventListener("DOMContentLoaded", function () {
         routeList.innerHTML = "";
         originBox.textContent = "-";
         destinationBox.textContent = "-";
+        backButton.style.display = "none";
       }
 
-    
+      function showLoader() {
+        loaderOverlay.style.display = "flex";
+        setTimeout(function () {
+          loaderOverlay.style.display = "none";
+        }, 1000); // 5000 milliseconds = 5 seconds
+      }
   
     
 function checkBusNumber(busNumber) {
