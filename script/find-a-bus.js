@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const originBox = document.querySelector(".box h2:first-child + h4");
     const destinationBox = document.querySelector(".box1 h2:first-child + h4");
 
+
+
+
+
     // Add an event listener for the "keydown" event on the input field
     busNumberInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
@@ -20,14 +24,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+
+
+
     const chennaiButton = document.querySelector(".chennaiButton");
     const cbeButton = document.querySelector(".cbeButton");
     const maduraiButton = document.querySelector(".maduraiButton");
+    const KancheepuramButton = document.querySelector(".KancheepuramButton");
+
+
     const titleDistrict = document.querySelector(".title-district");
     const searchContainer = document.getElementById("search");
+
+
+
     const district = document.getElementById("district");
     const backButton = document.getElementById("backButton");
     const loaderOverlay = document.getElementById("loader-overlay");
+
+
+
+
+
+
+
 
 
     let url="";
@@ -41,6 +61,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
+
+
+
+
+
+
+
+
     cbeButton.addEventListener("click", function (event) {
       event.preventDefault();
       toggleSearchContainer();
@@ -50,9 +78,37 @@ document.addEventListener("DOMContentLoaded", function () {
       showLoader();
     });
 
+
+
     maduraiButton.addEventListener("click", function (event) {
         alert("Coming soon!");
     });
+
+    KancheepuramButton.addEventListener("click", function (event) {
+        alert("Coming soon!");
+    });
+
+
+    const SalemButton = document.querySelector(".SalemButton");
+    const TirunelveliButton = document.querySelector(".TirunelveliButton");
+    const DharmapuriButton = document.querySelector(".DharmapuriButton");
+
+
+    SalemButton.addEventListener("click", function (event) {
+        alert("Coming soon!");
+    });
+
+    TirunelveliButton.addEventListener("click", function (event) {
+        alert("Coming soon!");
+    });
+
+    DharmapuriButton.addEventListener("click", function (event) {
+        alert("Coming soon!");
+    });
+
+
+
+
 
 
 
@@ -66,6 +122,19 @@ document.addEventListener("DOMContentLoaded", function () {
         showLoader();
       });
   
+
+
+
+
+
+
+
+
+
+
+
+
+
       // Function to go back
       function goBack() {
         // You can customize this logic to navigate back or perform other actions
@@ -78,6 +147,15 @@ document.addEventListener("DOMContentLoaded", function () {
         backButton.style.display = "none";
       }
 
+
+
+
+
+
+
+
+
+
       function showLoader() {
         loaderOverlay.style.display = "flex";
         setTimeout(function () {
@@ -85,7 +163,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1000); // 5000 milliseconds = 5 seconds
       }
   
-    
+  
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function checkBusNumber(busNumber) {
     $.ajax({
         url: url,
@@ -132,6 +232,24 @@ function checkBusNumber(busNumber) {
 }
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

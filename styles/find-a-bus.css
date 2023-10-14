@@ -53,12 +53,45 @@ header {
 }
 
 
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.flex-container span{
+  color: #000;
+   font-size:smaller;
+  }
+
+
+
+.flex-item {
+  background: #B1003C;
+
+  width: 100px;
+  height:50px;
+  margin: 10px;
+  
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+}
+
+
+
+
+
 .district-container {
   position: relative;
- top: 400px;
+ top: 550px;
 left: 50%;
  transform: translate(-50%, -50%);
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -72,14 +105,17 @@ left: 50%;
   .district-container {
    
     position: relative;
-    top: 700px;
+    top: 1200px;
+    
     flex-direction: column; /* Change to column layout on smaller screens */
     padding: 10px; /* Adjust padding for smaller screens */
+
   }
 
 
 
 }
+
 
 
 .title-district{
@@ -92,19 +128,10 @@ left: 50%;
 
 }
 
-@media only screen and (max-width: 600px) {
-  /* Adjust font size for smaller screens */
- .title-district {
-    font-size: 1.5em;
-  }
-}
 
-@media only screen and (max-width: 400px) {
-  /* Further adjust font size for even smaller screens */
-.title-district {
-    font-size: 1.2em;
-  }
-}
+
+
+
 
 
 .button-container {
@@ -121,8 +148,9 @@ left: 50%;
 }
 
 .rounded-button img {
-  width: 70%;
-  height: 70%;
+  margin: 10px;
+  height: 200px;
+  width:200px;
   border-radius: 50%;
   border: 8px solid #B1003C;
 }
