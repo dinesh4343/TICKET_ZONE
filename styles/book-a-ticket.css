@@ -1,0 +1,51 @@
+form {
+  
+ 
+       border-radius: 50px;
+            width: 80%;
+            max-width: 4000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 100px;
+}
+
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+/* Make origin and destination fields display side by side on larger screens */
+.form-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    gap: 200px;
+    margin-bottom: 20px;
+}
+
+
+
+#button {
+    background-color: #B1003C;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    background-color: #B1003C;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#button:hover {
+    background-color: #45a049;
+    background-color: #2E8B57;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

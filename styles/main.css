@@ -19,9 +19,7 @@
   padding: 1rem;
   position: fixed;
   width: 100%;
-  background-color: #F6F1F1;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  box-shadow: 0 0 10px black;
+
   z-index: 9999;
   transition: 0.4s;
   font-weight: 600;
@@ -340,6 +338,11 @@ margin:0% 3%;
     text-align: center;
     justify-self: center;
     
+  }
+  .header-nav{
+    background-color: #F6F1F1;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 0 10px black;
   }
 
 
