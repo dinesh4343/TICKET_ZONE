@@ -1,28 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const searchButton = document.getElementById("searchButton");
-    const busNumberInput = document.getElementById("busNumber");
-    const routeList = document.getElementById("routeList");
-    const originBox = document.querySelector(".box h2:first-child + h4");
-    const destinationBox = document.querySelector(".box1 h2:first-child + h4");
-
-
-
-
-
-    // Add an event listener for the "keydown" event on the input field
-    busNumberInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault(); // Prevent form submission if inside a form
-            const busNumber = busNumberInput.value;
-            checkBusNumber(busNumber);
-        }
-    });
-
-    searchButton.addEventListener("click", function () {
-        const busNumber = busNumberInput.value;
-        checkBusNumber(busNumber);
-    });
-
+   
 
 
 
@@ -179,7 +156,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+      const searchButton = document.getElementById("searchButton");
+      const busNumberInput = document.getElementById("busNumber");
+      const routeList = document.getElementById("routeList");
+      const originBox = document.querySelector(".box h2:first-child + h4");
+      const destinationBox = document.querySelector(".box1 h2:first-child + h4");
+  
+  
+  
+  
+  
+      // Add an event listener for the "keydown" event on the input field
+      busNumberInput.addEventListener("keydown", function (event) {
+          if (event.key === "Enter") {
+              event.preventDefault(); // Prevent form submission if inside a form
+              const busNumber = busNumberInput.value;
+              checkBusNumber(busNumber);
+          }
+      });
+  
+      searchButton.addEventListener("click", function () {
+          const busNumber = busNumberInput.value;
+          checkBusNumber(busNumber);
+      });
+  
 
 
 

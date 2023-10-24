@@ -16,7 +16,6 @@ const auth = firebase.auth();
 
 
 
-document.getElementById('loader-overlay').style.display = 'flex';
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
     const confirmPasswordInput = document.getElementById('confirmPassword');
@@ -52,6 +51,8 @@ const genderValue = document.querySelector('input[name="userGender"]:checked').v
 
 try {
     console.log('Creating user...');
+    
+document.getElementById('loader-overlay').style.display = 'flex';
     const userCredential = await auth.createUserWithEmailAndPassword(email, password);
     console.log('User created successfully.');
 
