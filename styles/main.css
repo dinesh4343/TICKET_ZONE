@@ -19,7 +19,7 @@
   padding: 1rem;
   position: fixed;
   width: 100%;
-
+  background-color: #F6F1F1;
   z-index: 9999;
   transition: 0.4s;
   font-weight: 600;

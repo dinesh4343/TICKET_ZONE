@@ -3,109 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- Other head elements... -->
+    <title>Bus Tracking System</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-
-<div id="search">
-    <div class="search-container">
-        <label for="searchStopName"><h3>ROUTE INFORMATION</h3></label>
-        <br>
-        <input type="text" id="searchStopName" placeholder="Enter stop name">
-        <br>
-        <br>
-        <button id="searchButton">Search</button>
-    </div>
-
-  
-
-    <div class="route">
-        <ul id="routeList" class="timeline timeline-vertical"></ul>
-    </div>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const searchButton = document.getElementById("searchButton");
-    const searchStopNameInput = document.getElementById("searchStopName");
-    const routeList = document.getElementById("routeList");
-    const originBox = document.querySelector(".box h2:first-child + h4");
-    const destinationBox = document.querySelector(".box1 h2:first-child + h4");
-
-    searchStopNameInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            const searchStopName = searchStopNameInput.value;
-            checkStopName(searchStopName);
-        }
-    });
-
-    searchButton.addEventListener("click", function () {
-        const searchStopName = searchStopNameInput.value;
-        checkStopName(searchStopName);
-    });
-
-    
-    
-    function checkStopName(searchStopName) {
-    
-    $.ajax({
-        type: "GET",
-    url: "lib/bus_stops.csv",
-    dataType: "text",
-    success: function (data) {
-        let lines = data.split("\n");
-    let foundRoutes = [];
-
-    for (let i = 1; i < lines.length; i++) {
-    let cols = lines[i].split(",");
-    if (cols.length >= 4 && cols[3] && cols[3].trim() === searchStopName.trim()) {
-        foundRoutes.push(cols);
-    }
-}
-
-if (foundRoutes.length > 0) {
-    let routeInfo = "";
-
-    // Group found routes by bus number
-    let groupedRoutes = {};
-    for (let i = 0; i < foundRoutes.length; i++) {
-        let busNumber = foundRoutes[i][1];
-        if (!groupedRoutes[busNumber]) {
-            groupedRoutes[busNumber] = [];
-        }
-        groupedRoutes[busNumber].push(foundRoutes[i]);
-    }
-
-    // Generate timeline structure
-    for (let busNumber in groupedRoutes) {
-        routeInfo += `<li><strong>Bus Number: ${busNumber}</strong></li>`;
-        let foundRows = groupedRoutes[busNumber];
-        for (let i = 0; i < foundRows.length; i++) {
-            let start = foundRows[i][3];
-            routeInfo += `<li>
-                <div class="timeline--circle"> <i></i></div>
-                <div class="timeline--description">${start}</div>
-            </li>`;
-        }
-    }
-
-    routeList.innerHTML = routeInfo;
-} else {
-    routeList.innerHTML = "<li>Stop name not found.</li>";
-}
-
-        },
-        error: function () {
-        // Handle the case where there is an error in the AJAX request
-        routeList.innerHTML = "<li>Error loading data.</li>";
-   
-    }
-    });
-}
-});
-</script>
-
+    <div id="map"></div>
+    <script>
+        
+    </script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

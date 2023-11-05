@@ -13,7 +13,7 @@ form {
 
 
 input {
-    width: 100%;
+    width: 50%;
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
@@ -31,7 +31,7 @@ input {
 
 @media screen and (max-width: 1000px) {
     form {
-        width: 70%;
+        width: 50%;
      
     }
 
@@ -54,7 +54,7 @@ input {
 
 
 
-#button {
+#searchButton {
     background-color: #B1003C;
     color: white;
     padding: 10px;
@@ -66,9 +66,38 @@ input {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#button:hover {
+#searchButton:hover {
     background-color: #45a049;
     background-color: #2E8B57;
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+
+
+
+
+#suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 9999;
+}
+
+#suggestions li {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#suggestions li:hover {
+    background-color: #ddd;
+}
+
