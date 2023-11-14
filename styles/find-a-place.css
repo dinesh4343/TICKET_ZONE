@@ -1,0 +1,120 @@
+form {
+  
+ 
+    border-radius: 50px;
+         width: 80%;
+         max-width: 4000px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         margin-bottom: 100px;
+}
+
+
+input {
+ width: 50%;
+ padding: 8px;
+ margin-bottom: 16px;
+ box-sizing: border-box;
+}
+
+/* Make origin and destination fields display side by side on larger screens */
+.form-row {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ width: 70%;
+ gap: 200px;
+ margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+ form {
+     width: 50%;
+  
+ }
+
+.to{
+ text-align: center;
+ margin-bottom: 20px;
+ font-size: large;
+ font-weight: 500;
+}
+
+ .form-row {
+     width: 100%;
+     justify-content: space-between;
+     justify-self: center;
+     flex-direction: column;
+     gap: 0;
+ }
+
+ input {
+     width: 100%;
+     
+ }
+}
+
+
+
+
+#searchButton {
+ background-color: #B1003C;
+ color: white;
+ padding: 10px;
+ border: none;
+ border-radius: 10px;
+ cursor: pointer;
+ transition: transform 0.3s ease-in-out;
+ background-color: #B1003C;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#searchButton:hover {
+ background-color: #45a049;
+ background-color: #2E8B57;
+ transform: scale(1.1);
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+#suggestions {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ position: relative;
+
+ border: 1px solid #ccc;
+ max-height: 150px;
+ overflow-y: auto;
+ z-index: 9999;
+}
+
+#suggestions li {
+ width: 100%;
+ padding: 8px;
+ margin-bottom: 16px;
+ box-sizing: border-box;
+ cursor: pointer;
+}
+
+#suggestions li:hover {
+ background-color: #ddd;
+}
+
+/* Default styles for larger screens */
+#routeList {
+ display: flex;
+ flex-direction: column;
+}
+
+/* Media query for screens with a maximum width of 600 pixels */
+@media only screen and (max-width: 600px) {
+ #routeList {
+     width: 100%;
+ }
+}

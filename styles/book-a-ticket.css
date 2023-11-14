@@ -1,120 +1,65 @@
-form {
-  
+
  
-       border-radius: 50px;
-            width: 80%;
-            max-width: 4000px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 100px;
-}
-
-
-input {
-    width: 50%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-}
-
-/* Make origin and destination fields display side by side on larger screens */
-.form-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 70%;
-    gap: 200px;
+  h1 {
+    font-size: 32px;
+    color: #333;
     margin-bottom: 20px;
-}
-
-@media screen and (max-width: 1000px) {
-    form {
-        width: 50%;
-     
-    }
-
-   .to{
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: large;
-    font-weight: 500;
-   }
-
-    .form-row {
-        width: 100%;
-        justify-content: space-between;
-        justify-self: center;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    input {
-        width: 100%;
-        
-    }
-}
-
-
-
-
-#searchButton {
-    background-color: #B1003C;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    background-color: #B1003C;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-#searchButton:hover {
-    background-color: #45a049;
-    background-color: #2E8B57;
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-
-
-
-#suggestions {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  }
+  
+  
+form {
     position: relative;
-
-    border: 1px solid #ccc;
-    max-height: 150px;
-    overflow-y: auto;
-    z-index: 9999;
-}
-
-#suggestions li {
+  
+    border-radius: 8px;
+  
+    padding: 20px;
+    max-width: 400px;
     width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-    cursor: pointer;
-}
+    margin: auto;
+    margin-top: 100px; /* Adjust the top margin as needed */
+   
+  }
+  
+  label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    background-color: #B1003C;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #2E8B57;
+  }
+  
+  button:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #2E8B57;
+  }
 
-#suggestions li:hover {
-    background-color: #ddd;
-}
+  .bus-tic{
+    font-size: 2em; /* Default font size */
+    position: relative;
+    top: 150px;
+  
+    text-align: center;
+   margin-bottom: 10%;
+  }
 
-/* Default styles for larger screens */
-#routeList {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Media query for screens with a maximum width of 600 pixels */
-@media only screen and (max-width: 600px) {
-    #routeList {
-        width: 100%;
-    }
-}
+  

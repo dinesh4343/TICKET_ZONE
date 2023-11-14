@@ -11,9 +11,9 @@
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/find-a-bus.css">
     <link rel="stylesheet" href="styles/book-a-ticket.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/neocotic/qrious/master/dist/qrious.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    
 </head>
 <body>
@@ -30,8 +30,9 @@
 
     <div class="nav-buttons">
       <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-      <a class="nav-link active" aria-current="page" href="book-a-ticket.html">Book A Ticket</a>
-      <a class="nav-link active" aria-current="page" href="find-a-bus.html">Find A Bus</a>
+      <a class="nav-link active" aria-current="page" href="book-a-ticket.html" style="color: #B1003C;">Book A Ticket</a>
+      <a class="nav-link active" aria-current="page" href="find-a-bus.html" >Find A Bus</a>
+      <a class="nav-link active" aria-current="page" href="find-a-place.html">Find A Route</a>
       <a class="nav-link active" aria-current="page" href="find-a-bus.html">Track Your Bus</a>
    
     </div>
@@ -65,6 +66,7 @@
   <a href="index.html" class="nav-btn">Home</a>
   <a href="book-a-ticket.html" class="nav-btn">Book A Ticket</a>
   <a href="find-a-bus.html" class="nav-btn">Find A Bus</a>
+  <a href="find-a-place.html" class="nav-btn">Find A Route</a>
   <a href="#" class="nav-btn">Track Your Bus</a>
 
    
@@ -76,129 +78,31 @@
     <span class="line"></span>
 </div>
 
+<h1 class="bus-tic">Bus Ticket Booking</h1>
 
+<form onsubmit="generateQRCode(event)">
+    <label for="passengerName">Passenger Name:</label>
+    <input type="text" id="passengerName" required>
 
-<button id="backButton" class="back"><svg class="back"xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
-</svg></button>
+    <label for="mobileNumber">Mobile Number:</label>
+    <input type="tel" id="mobileNumber" pattern="[0-9]{10}" placeholder="Enter 10-digit mobile number" required>
 
-<h1 class="title-district">Choose Your District</h1>
+    <label for="fromLocation">From Location:</label>
+    <input type="text" id="fromLocation" required>
 
-<div id="district">
-<div class="district-container">
-  <div class="button-container">
-    <div class="rounded-button">
-      <a href="#" class="chennaiButton">
-        <img src="assests/chennai.png" alt="Button 1">
-      </a>
-    </div>
-    <p>Chennai</p>
-  </div>
+    <label for="busNumber">Bus Number:</label>
+    <input type="text" id="busNumber" required>
 
-  <div class="button-container">
-    <div class="rounded-button">
-      <a href="#" class="cbeButton">
-        <img src="assests/cbe.png" alt="Button 2">
-      </a>
-    </div>
-    <p>Coimbatore</p>
-  </div>
-  <div class="button-container">
-    <div class="rounded-button">
-      <a href="#" class="maduraiButton">
-        <img src="assests/madurai.png" alt="Button 2">
-      </a>
-    </div>
-    <p>Madurai</p>
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" required>
 
-  </div>
-  <div class="button-container">
-    <div class="rounded-button">
-      <a href="#" class="KancheepuramButton">
-        <img src="assests/madurai.png" alt="Button 2">
-      </a>
-    </div>
-    <p>
-      Kancheepuram</p>
-  </div>
-  <div class="button-container">
-    <div class="rounded-button">
-      <a href="#" class="SalemButton">
-        <img src="assests/madurai.png" alt="Button 2">
-      </a>
-    </div>
-    <p>Salem</p>
-  </div>
-  <div class="button-container">
-    <div class="rounded-button">
-      <a href="#" class="TirunelveliButton">
-        <img src="assests/madurai.png" alt="Button 2">
-      </a>
-    </div>
-    <p>
-      Tirunelveli</p>
-  </div>
-  <div class="button-container">
-    <div class="rounded-button">
-      <a href="#" class="DharmapuriButton">
-        <img src="assests/madurai.png" alt="Button 2">
-      </a>
-    </div>
-    <p>Dharmapuri</p>
-  </div>
+    <label for="numTickets">Number of Tickets:</label>
+    <input type="number" id="numTickets" min="1" required>
 
+    <button type="submit">Book Tickets</button>
+  </form>
 
-</div> 
-</div>
-
-
-
-<div id="loader-overlay">
-  <div><dotlottie-player src="https://lottie.host/5b9de908-f385-47d4-8460-3bf213d573f0/5IvSU6RSLb.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></dotlottie-player></div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="search">
-
-  <div class="search-container">
-
-
-
-    <h1 style="margin-bottom: 120px;">Buy Yor Ticket</h1>
-
-
-
-   <form id="bookingForm">
-    <br>
-    <input type="text" id="searchStopName" placeholder="Enter stop name" oninput="suggestStops()">
-    <div id="suggestions"></div>
-    <br>
-    <br>
-    <button type="button" id="searchButton" onclick="bookTicket()">Search Ticket</button>
-</form>
-
-<div class="route">
-    <div id="routeList" class="timeline timeline-vertical"></div>
-</div>
-
-  </div>
-
-
-</div>
-
-
+  <canvas id="qr-code"></canvas>
 
 
 
@@ -242,9 +146,6 @@
     </footer>
 
 </body>
-
-
-
 
 
   <script src="script/script.js"></script>
