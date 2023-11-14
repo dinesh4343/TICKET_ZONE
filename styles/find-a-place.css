@@ -104,17 +104,38 @@ input {
 
 #suggestions li:hover {
  background-color: #ddd;
+
 }
 
 /* Default styles for larger screens */
 #routeList {
  display: flex;
+ text-align: justify;
+
  flex-direction: column;
 }
+#routeList {
 
+    justify-content:space-around;
+    
+    margin-bottom: 70px;
+    
+  
+  }
+  
+  .route{
+    position: relative;
+    top: -50px;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+  
+    cursor: pointer;
+  }
+  
 /* Media query for screens with a maximum width of 600 pixels */
 @media only screen and (max-width: 600px) {
  #routeList {
-     width: 100%;
+     width: 75%;
  }
 }
