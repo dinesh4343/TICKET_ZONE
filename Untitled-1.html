@@ -5,83 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bus Ticket Booking</title>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+     body {
       margin: 0;
-    }
-
-    form {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      gap: 10px;
+      height: 100vh;
+      background-color: #f0f0f0;
     }
 
-    #qr-code {
-      margin-top: 20px;
-      color: blue;
+    .card {
+      width: 590px;
+      height: 554px;
+      border-radius: 30px;
+      background: #e0e0e0;
+      box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
     }
+  
+
   </style>
 </head>
 <body>
-  <h1>Bus Ticket Booking</h1>
-  <form onsubmit="generateQRCode(event)">
-    <label for="passengerName">Passenger Name:</label>
-    <input type="text" id="passengerName" required>
 
-    <label for="mobileNumber">Mobile Number:</label>
-    <input type="tel" id="mobileNumber" pattern="[0-9]{10}" placeholder="Enter 10-digit mobile number" required>
+  
+<div class="card">
+  
+</div>
 
-    <label for="busNumber">Bus Number:</label>
-    <input type="text" id="busNumber" required>
-
-    <label for="destination">Destination:</label>
-    <input type="text" id="destination" required>
-
-    <label for="numTickets">Number of Tickets:</label>
-    <input type="number" id="numTickets" min="1" required>
-
-    <button type="submit">Book Tickets</button>
-  </form>
-
-  <canvas id="qr-code"></canvas>
-
-  <script src="https://cdn.rawgit.com/neocotic/qrious/master/dist/qrious.min.js"></script>
-  <script>
-    function generateQRCode(event) {
-      event.preventDefault();
-
-      var passengerName = document.getElementById("passengerName").value;
-      var mobileNumber = document.getElementById("mobileNumber").value;
-      var busNumber = document.getElementById("busNumber").value;
-      var destination = document.getElementById("destination").value;
-      var numTickets = document.getElementById("numTickets").value;
-
-      var bookingInfo = `Name: ${passengerName}\nMobile: ${mobileNumber}\nBus: ${busNumber}\nDestination: ${destination}\nTickets: ${numTickets}`;
-
-      var qr = new QRious({
-        value: bookingInfo,
-        size: 200,
-        foreground: 'red'
-      });
-
-      var canvas = document.createElement('canvas');
-      canvas.width = 200;
-      canvas.height = 200;
-      var ctx = canvas.getContext("2d");
-      ctx.drawImage(qr.canvas, 0, 0, canvas.width, canvas.height);
-
-      var imgDataUrl = canvas.toDataURL('image/png');
-
-      
-      var newTab = window.open();
-      newTab.document.write('Your ticket </h1> <img src="' + imgDataUrl + '" alt="QR Code">');
-    }
-  </script>
-</body>
+  </body>
 </html>
