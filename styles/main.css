@@ -144,6 +144,9 @@ left: 5px;
   text-decoration: none;
 }
 
+.nav-link{
+  font-size: small;
+}
 
 .nav-link::after{
   content:"";
@@ -229,6 +232,19 @@ left: 5px;
     height: 25px;
     margin-left: 9px;
   }
+
+  @media screen and  (max-width: 1200px){
+  .download-button{
+    display: none;
+  }
+}
+@media screen and  (max-width: 1400px){
+  .download-button{
+    font-size: small;
+  
+  }
+ 
+}
   
   .download-button:hover {
     background-color: #2E8B57;
@@ -329,7 +345,7 @@ margin:0% 3%;
 
 
 
-@media screen and (min-width: 250px) and (max-width: 880px) {
+@media screen and (min-width: 250px) and (max-width: 1000px) {
   .brand-name{
     font-size: 1rem;
  
