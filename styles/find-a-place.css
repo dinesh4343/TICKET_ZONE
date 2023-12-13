@@ -133,9 +133,22 @@ input {
     cursor: pointer;
   }
   
-/* Media query for screens with a maximum width of 600 pixels */
-@media only screen and (max-width: 600px) {
- #routeList {
-     width: 75%;
- }
-}
+
+
+
+
+
+  
+.rounded-button img {
+    margin: 10px;
+    height: 200px;
+    width:200px;
+    border-radius: 50%;
+    border: 8px solid #B1003C;
+  }
+  
+  
+  
+  .rounded-button:hover {
+    transform: scale(1.01);
+  }

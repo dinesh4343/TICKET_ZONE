@@ -1,36 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bus Ticket Booking</title>
-  <style>
-     body {
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
-    }
-
-    .card {
-      width: 590px;
-      height: 554px;
-      border-radius: 30px;
-      background: #e0e0e0;
-      box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
-    }
-  
-
-  </style>
+<meta charset="UTF-8">
+<title>Chennai Bus Live Location</title>
+<style>
+#map {
+  height: 400px;
+  width: 80%;
+  margin: 0 auto;
+}
+</style>
 </head>
 <body>
+<div id="map"></div>
 
-  
-<div class="card">
-  
-</div>
+<script>
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: {lat: 13.0636, lng: 80.2753}
+    });
 
-  </body>
+    // Add a marker for each bus stop
+    var busStops = [
+      {lat: 13.0636, lng: 80.2753, name: "Chennai Central Bus Terminus"},
+      {lat: 13.0652, lng: 80.2782, name: "Tambaram Bus Stand"},
+      {lat: 13.0678, lng: 80.2811, name: "Purasawalkam Bus Stand"},
+      {lat: 13.0704, lng: 80.2839, name: "Anna Nagar Bus Stand"},
+      {lat: 13.0730, lng: 80.2867, name: "Vadapalani Bus Stand"}
+    ];
+
+    for (var i = 0; i < busStops.length; i++) {
+      var marker = new google.maps.Marker({
+        position: {lat: busStops[i].lat, lng: busStops[i].lng},
+        map: map,
+        title: busStops[i].name
+      });
+    }
+
+    // Add a real-time bus location layer
+    var busLayer = new google.maps.TransitLayer();
+    busLayer.setMap(map);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initMap);
+</script>
+</body>
 </html>

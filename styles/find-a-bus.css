@@ -10,12 +10,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-header {
-  background-color: #007BFF;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
+
 
 .main {
   padding: 20px;
@@ -116,6 +111,9 @@ left: 50%;
   max-width: 1200px;
   margin-bottom: 250px;
 }
+
+
+
 @media (max-width: 768px) {
   /* Adjust styles for screens with a maximum width of 768px */
   .district-container {
@@ -168,7 +166,7 @@ left: 50%;
   height: 200px;
   width:200px;
   border-radius: 50%;
-  border: 8px solid #B1003C;
+  border: 8px solid #45a049;
 }
 
 
