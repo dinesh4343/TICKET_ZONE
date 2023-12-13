@@ -134,7 +134,58 @@ input {
   }
   
 
-
+ /* Media query for mobile screens */
+@media (max-width: 767px) {
+    .timeline li {
+      flex-direction: column; /* Stack items vertically on mobile */
+    }
+  
+    .timeline--date {
+      flex: 0 0 auto; /* Reset flex property */
+      text-align: left; /* Align text to the left on mobile */
+      margin-right: 0; /* Remove right margin on mobile */
+      margin-bottom: 10px; /* Add bottom margin on mobile */
+    }
+  
+    .timeline--circle {
+      flex: 0 0 auto; /* Reset flex property */
+      margin-bottom: 10px; /* Add bottom margin on mobile */
+    }
+  
+    .timeline--circle:before {
+      display: none; /* Hide the connecting line on mobile */
+    }
+  
+    .timeline--circle i {
+        display: none;
+    }
+  
+    .timeline--description {
+      margin-left: 0; /* Remove left margin on mobile */
+    }
+  
+    /* Styles for the first timeline item on mobile */
+    .timeline li:first-child .timeline--date,
+    .timeline li:first-child .timeline--description {
+      margin-top: 0; /* Remove top margin on mobile */
+    }
+  
+    .timeline li:first-child .timeline--circle:before,
+    .timeline li:first-child .timeline--circle {
+      margin-top: 0; /* Remove top margin on mobile */
+    }
+  
+    .timeline li:first-child .timeline--circle:after,
+    .timeline li:first-child .timeline--circle i {
+      width: 30px; /* Adjust size for the first circle on mobile */
+      height: 30px;
+    }
+  
+    .timeline li:first-child .timeline--circle i:after {
+      width: 10px; /* Adjust size for the inner circle on mobile */
+      height: 10px;
+    }
+  }
 
 
 
