@@ -282,6 +282,28 @@ left: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
+  .auth-button-signout{
+  
+    border-radius: 50px;
+    display: none;
+    margin-left: 5px;
+    transition: display 5s ease;
+    transition: none 5s ease;
+    background-color: #B1003C;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .auth-button-signout{
+
+    background-color: #2E8B57;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
 
 body{
   overflow-x:hidden;

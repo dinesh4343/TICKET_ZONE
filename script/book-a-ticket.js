@@ -178,3 +178,8 @@ function getCurrentTime() {
   var options = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
   return currentTime.toLocaleTimeString('en-US', options);
 }
+
+
+
+
+

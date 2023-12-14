@@ -65,8 +65,7 @@ function closeModalOnOutsideClick(modalId) {
   document.getElementById('profile-button').addEventListener('click', function (event) {
     event.stopPropagation(); 
 
-    var signUpButton = document.getElementById('sign-up-button');
-    var signInButton = document.getElementById('sign-in-button');
+    
 
     signUpButton.style.display = (signUpButton.style.display === 'none') ? 'block' : 'none';
     signInButton.style.display = (signInButton.style.display === 'none') ? 'block' : 'none';
