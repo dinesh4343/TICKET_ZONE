@@ -28,7 +28,9 @@
 
 
 
-
+html, body{
+  overflow-x: hidden;
+}
 
 .header-nav {
   overflow-x:hidden;
