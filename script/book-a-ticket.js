@@ -16,8 +16,9 @@ function generateQRCode(event) {
   var qr = new QRious({
     value: bookingInfo,
     size: 200,
-    foreground: 'purple'
+    foreground: '#B1003C'
   });
+  
 
   // Convert canvas to data URL
   var imgDataUrl = qr.toDataURL('image/png');
@@ -32,12 +33,14 @@ function generateQRCode(event) {
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <style>
       body {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 100vh;
+        background-color: #333;
         background-size: 400% 400%;
         animation: gradientAnimation 15s infinite;
         margin-top: 50px;
@@ -58,17 +61,19 @@ function generateQRCode(event) {
       }
   
       .ticket-container {
-        width: 90%; /* Adjusted for smaller screens */
+        width: 90%;
         max-width: 590px;
         display: flex;
-        flex-direction: column; /* Changed to column for smaller screens */
-        align-items: center; /* Center content in smaller screens */
+        flex-direction: column;
+        align-items: center;
         border-radius: 30px;
         background: #e0e0e0;
-        box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
         text-align: center;
-        padding: 20px;
-      }
+        padding: 50px;
+        
+    }
+
+  
   
       .left-section {
         text-align: center; /* Center text in smaller screens */
@@ -111,9 +116,19 @@ function generateQRCode(event) {
         font-size: 14px; /* Adjusted font size for smaller screens */
       }
   
+      @media only screen and (max-width: 600px) {
+  .ticket-container {
+    max-width: 100%;
+    border-radius: 50px; /* Remove border-radius for smaller screens */
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #f7efe5;
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+}
+
       @media screen and (min-width: 768px) {
         /* Add styles for larger screens if needed */
         .ticket-container {
+          
           flex-direction: row; /* Reset back to row for larger screens */
           align-items: center; /* Align items to the center for larger screens */
         }
@@ -128,6 +143,15 @@ function generateQRCode(event) {
           margin-top: 0; /* Reset margin for larger screens */
         }
       }
+      .button {
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
   </head>
   
@@ -144,27 +168,43 @@ function generateQRCode(event) {
           <p><strong>Date:</strong> ${getCurrentDate()}</p>
         </div>
       </div>
-  
       <div>
-        <h1 style="color: #333;">Scan Your Ticket</h1>
-        <img src="${imgDataUrl}" alt="QR Code" class="ticket-info">
-      </div>
+      <h1 style="color: #333;">Scan Your Ticket</h1>
+      <img src="${imgDataUrl}" alt="QR Code" class="ticket-info">
+  </div>
+
     </div>
+    <button class="button" onclick="downloadTicket()">Download Ticket</button>
   
     <div class="footer">
       <p>Thank you for choosing our service.</p>
       <p>Contact us at support@example.com</p>
     </div>
-  
+
   </body>
+  <script>
+  function downloadTicket() {
+    var ticketContainer = document.querySelector('.ticket-container');
+    html2canvas(ticketContainer).then(function (canvas) {
+        var imgDataUrl = canvas.toDataURL("image/png");
+
+        var a = document.createElement('a');
+        a.href = imgDataUrl;
+        a.download = 'ticket.png';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
+}
+</script>
   
   </html>
-  
 
 
 
   `);
 }
+
 
 
 function getCurrentDate() {

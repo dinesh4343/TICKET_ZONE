@@ -54,6 +54,7 @@ function handleSignOut() {
   firebase.auth().signOut()
     .then(() => {
       // Sign-out successful
+      
       alert('Signed out successfully!');
       // Redirect to the sign-in page or any other desired page
       window.location.href = 'index.html';

@@ -105,13 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
-
-
-
-
       // Function to go back
       function goBack() {
         // You can customize this logic to navigate back or perform other actions
