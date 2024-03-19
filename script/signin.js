@@ -20,6 +20,7 @@ firebase.initializeApp({
   });
   
   
+  
   function handleSignIn(event) {
     event.preventDefault();
   
