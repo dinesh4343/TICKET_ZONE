@@ -408,6 +408,34 @@
     </footer>
 
 </body>
+<script>
+  
+  
+  document.getElementById('profile-button').addEventListener('click', function (event) {
+    event.stopPropagation();
+  
+    var signUpButton = document.getElementById('sign-up-button');
+    var signInButton = document.getElementById('sign-in-button');
+  
+    signUpButton.style.display = (signUpButton.style.display === 'none') ? 'block' : 'none';
+    signInButton.style.display = (signInButton.style.display === 'none') ? 'block' : 'none';
+  });
+  
+  document.body.addEventListener('click', function (event) {
+    var signUpButton = document.getElementById('sign-up-button');
+    var signInButton = document.getElementById('sign-in-button');
+  
+    // Check if the event target is the `profile-button` element before hiding the `sign-up-button` and `sign-in-button` elements.
+    if (!document.getElementById('profile-button').contains(event.target)) {
+      signUpButton.style.display = 'none';
+      signInButton.style.display = 'none';
+    }
+  });
+  
+
+
+
+</script>
 
 <script src="script/alert.js"></script>
 
